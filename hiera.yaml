@@ -1,0 +1,9 @@
+:backends:
+  - yaml
+:yaml:
+  #:datadir: /Users/bmurtagh/Dropbox/PHRG/puppet/hieradata
+  :datadir: /etc/puppetlabs/puppet/hieradata
+:hierarchy:
+  - vagrant 
+  - common
+:logger: console

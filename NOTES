@@ -1,0 +1,57 @@
+dimadmin@asterisk:~$ aptitude search asterisk
+i   asterisk                             - Open Source Private Branch Exchange (PBX)      
+p   asterisk:i386                        - Open Source Private Branch Exchange (PBX)      
+v   asterisk-1.8                         -                                                
+v   asterisk-1.8:i386                    -                                                
+i A asterisk-config                      - Configuration files for Asterisk               
+p   asterisk-core-sounds-en-g722         - asterisk PBX sound files - English/g722        
+i A asterisk-core-sounds-en-gsm          - asterisk PBX sound files - English/gsm         
+p   asterisk-core-sounds-en-wav          - asterisk PBX sound files - English/wav         
+p   asterisk-core-sounds-es-g722         - asterisk PBX sound files - Spanish/g722        
+p   asterisk-core-sounds-es-gsm          - asterisk PBX sound files - Spanish/gsm         
+p   asterisk-core-sounds-es-wav          - asterisk PBX sound files - Spanish/wav         
+p   asterisk-core-sounds-fr-g722         - asterisk PBX sound files - French/g722         
+p   asterisk-core-sounds-fr-gsm          - asterisk PBX sound files - French/gsm          
+p   asterisk-core-sounds-fr-wav          - asterisk PBX sound files - French/wav          
+p   asterisk-dahdi                       - DAHDI devices support for the Asterisk PBX     
+p   asterisk-dahdi:i386                  - DAHDI devices support for the Asterisk PBX     
+p   asterisk-dbg                         - Debugging symbols for Asterisk                 
+p   asterisk-dbg:i386                    - Debugging symbols for Asterisk                 
+i   asterisk-dev                         - Development files for Asterisk                 
+p   asterisk-doc                         - Source code documentation for Asterisk         
+p   asterisk-mobile                      - Bluetooth phone support for the Asterisk PBX   
+p   asterisk-mobile:i386                 - Bluetooth phone support for the Asterisk PBX   
+i A asterisk-modules                     - loadable modules for the Asterisk PBX          
+p   asterisk-modules:i386                - loadable modules for the Asterisk PBX          
+p   asterisk-moh-opsound-g722            - asterisk extra sound files - English/g722      
+i A asterisk-moh-opsound-gsm             - asterisk extra sound files - English/gsm       
+p   asterisk-moh-opsound-wav             - asterisk extra sound files - English/wav       
+p   asterisk-mp3                         - MP3 playback support for the Asterisk PBX      
+p   asterisk-mp3:i386                    - MP3 playback support for the Asterisk PBX      
+p   asterisk-mysql                       - MySQL database protocol support for the Asteris
+p   asterisk-mysql:i386                  - MySQL database protocol support for the Asteris
+p   asterisk-ooh323                      - H.323 protocol support for the Asterisk PBX - o
+p   asterisk-ooh323:i386                 - H.323 protocol support for the Asterisk PBX - o
+p   asterisk-prompt-de                   - German voice prompts for the Asterisk PBX      
+v   asterisk-prompt-en                   -                                                
+v   asterisk-prompt-en-us                -                                                
+p   asterisk-prompt-es                   - Spanish prompts for the Asterisk PBX           
+p   asterisk-prompt-es-co                - Colombian Spanish voice prompts for Asterisk   
+v   asterisk-prompt-es-mx                -                                                
+v   asterisk-prompt-fr                   -                                                
+p   asterisk-prompt-fr-armelle           - French voice prompts for Asterisk by Armelle De
+v   asterisk-prompt-fr-ca                -                                                
+p   asterisk-prompt-fr-proformatique     - French voice prompts for Asterisk              
+p   asterisk-prompt-it                   - Italian voice prompts for the Asterisk PBX     
+p   asterisk-prompt-se                   - Swedish voice prompts for Asterisk             
+i A asterisk-voicemail                   - simple voicemail support for the Asterisk PBX  
+p   asterisk-voicemail:i386              - simple voicemail support for the Asterisk PBX  
+p   asterisk-voicemail-imapstorage       - IMAP voicemail storage support for the Asterisk
+p   asterisk-voicemail-imapstorage:i386  - IMAP voicemail storage support for the Asterisk
+p   asterisk-voicemail-odbcstorage       - ODBC voicemail storage support for the Asterisk
+p   asterisk-voicemail-odbcstorage:i386  - ODBC voicemail storage support for the Asterisk
+v   asterisk-voicemail-storage           -                                                
+v   asterisk-voicemail-storage:i386      -                                                
+p   libasterisk-agi-perl                 - Collections of Perl modules to be used with Ast
+p   python-asterisk                      - Asterisk Manager API interface module for Pytho
+dimadmin@asterisk:~$ 
