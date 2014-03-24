@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
     ubuntu_vm.vm.provision :puppet do |puppet|
       puppet.manifests_path = '/Users/bmurtagh/Dropbox/PHRG/puppet/environments/vagrant/manifests'
       puppet.manifest_file = 'site.pp'
-      puppet.options = "--config /vagrant/puppet.conf --fileserverconfig=/vagrant/fileserver.conf"
+      puppet.options = "--config /vagrant/puppet.conf --fileserverconfig=/vagrant/fileserver.conf --environment vagrant"
       puppet.module_path = ['/Users/bmurtagh/Dropbox/PHRG/puppet/environments/vagrant', '/Users/bmurtagh/Dropbox/PHRG/puppet/modules']
       puppet.hiera_config_path = 'hiera.yaml'
       puppet.facter = { 
