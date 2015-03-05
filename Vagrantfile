@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   end
 
   # Ubuntu 14.04 Box
-  config.vm.define :ubuntu_vm do |box_config|
+  config.vm.define :ubuntu do |box_config|
     box_config.vm.box = 'puppetlabs/ubuntu-14.04-64-puppet'
     box_config.vm.network :public_network, ip: "10.1.1.221"
     box_config.vm.hostname = "ubuntu"
@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
   end 
 
   # CentOS 6.6 Box
-  config.vm.define :centos_vm do |box_config|
+  config.vm.define :centos do |box_config|
     box_config.vm.box = 'puppetlabs/centos-6.6-64-puppet'
     box_config.vm.network :public_network, ip: "10.1.1.222"
     box_config.vm.hostname = "centos"
