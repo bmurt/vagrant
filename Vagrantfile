@@ -1,8 +1,8 @@
-# Ubuntu / PHRG
+
+# Ubuntu 14.04 x64
 Vagrant.configure("2") do |config|
-  config.vm.box = 'ubuntu64'
-  config.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box'
-  config.vm.synced_folder '/Users/bmurtagh/Dropbox/PHRG/puppet/hieradata', '/etc/puppetlabs/puppet/hieradata'
+  config.vm.box = 'puppetlabs/ubuntu-14.04-64-puppet'
+  config.vm.synced_folder '/Users/brendan/Dropbox/Development/dmoore-puppet/hieradata', '/etc/puppet/hieradata'
   config.vm.provision :shell, :path => "ubuntu_bootstrap.sh"
 
   config.vm.provider :virtualbox do |vb|
@@ -14,34 +14,29 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define :ubuntu_vm do |ubuntu_vm|
-    #ubuntu_vm.vm.network :private_network, ip: "10.10.10.10"
-    ubuntu_vm.vm.network :public_network, ip: "10.1.4.220"
-    ubuntu_vm.vm.hostname = "ubuntu64"
+    ubuntu_vm.vm.network :public_network, ip: "10.1.1.221"
+    ubuntu_vm.vm.hostname = "ubuntu"
     ubuntu_vm.vm.provider :virtualbox do |vb|
-      vb.name = "Ubuntu64"
+      vb.name = "ubuntu"
   end
 
     ubuntu_vm.vm.provision :puppet do |puppet|
-      puppet.manifests_path = '/Users/bmurtagh/Dropbox/PHRG/puppet/environments/vagrant/manifests' # PHRG
-      #puppet.manifests_path = 'puppet/manifests'
+      puppet.manifests_path = '/Users/brendan/Dropbox/Development/dmoore-puppet/manifests'
       puppet.manifest_file = 'site.pp'
-      puppet.options = "--config /vagrant/puppet.conf --fileserverconfig=/vagrant/fileserver.conf --environment vagrant"
-      puppet.module_path = ['/Users/bmurtagh/Dropbox/PHRG/puppet/environments/vagrant/modules', '/Users/bmurtagh/Dropbox/PHRG/puppet/modules'] # PHRG
-      #puppet.module_path = 'puppet/modules'
+      puppet.options = "--config /vagrant/puppet.conf --fileserverconfig=/vagrant/fileserver.conf --environment production"
+      puppet.module_path = ['/Users/brendan/Dropbox/Development/dmoore-puppet/modules']
       puppet.hiera_config_path = 'hiera.yaml'
       puppet.facter = {
-        "fqdn" => 'ubuntu64.powerhrg.com'
+        "fqdn" => 'ubuntu.pow.boomboom'
       }
     end
   end
 end
 
-#Vagrant.configure("2") do |centos_config|
-#  centos_config.vm.box = 'centos65'
-#  centos_config.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box'
-  #centos_config.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box'
-  #centos_config.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-65-i386-virtualbox-puppet.box'
-#  centos_config.vm.synced_folder '/Users/bmurtagh/Dropbox/PHRG/puppet/hieradata', '/etc/puppetlabs/puppet/hieradata'
+# CentOS 6.6 x64
+# Vagrant.configure("2") do |centos_config|
+#  centos_config.vm.box = 'puppetlabs/centos-6.6-64-puppet'
+#  centos_config.vm.synced_folder '/Users/brendan/Dropbox/Development/dmoore-puppet/hieradata', '/etc/puppet/hieradata'
 #  centos_config.vm.provision :shell, :path => "centos_bootstrap.sh"
 
 #  centos_config.vm.provider :virtualbox do |centos_vb|
@@ -52,22 +47,22 @@ end
 #    centos_vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
 #  end
 
-#  centos_config.vm.define :centos65_vm do |centos65_vm|
-#    centos65_vm.vm.network :private_network, ip: "11.11.11.11"
-#    centos65_vm.vm.hostname = "centos65"
-#    centos65_vm.vm.provider :virtualbox do |vb|
-#      vb.name = "centos65_vm"
+#  centos_config.vm.define :centos_vm do |centos_vm|
+#    centos_vm.vm.network :public_network, ip: "10.1.1.222"
+#    centos_vm.vm.hostname = "centos"
+#    centos_vm.vm.provider :virtualbox do |vb|
+#      vb.name = "centos"
 #  end
 
-#    centos65_vm.vm.provision :puppet do |puppet|
-#      puppet.manifests_path = '/Users/bmurtagh/Dropbox/PHRG/puppet/environments/vagrant/manifests'
-#      puppet.manifest_file = 'site.pp'
-#     puppet.options = "--config /vagrant/puppet.conf --fileserverconfig=/vagrant/fileserver.conf --environment vagrant"
-#      puppet.module_path = ['/Users/bmurtagh/Dropbox/PHRG/puppet/environments/vagrant/modules', '/Users/bmurtagh/Dropbox/PHRG/puppet/modules']
-#      puppet.hiera_config_path = 'hiera.yaml'
-#      puppet.facter = {
-#        "fqdn" => 'centos65.powerhrg.com'
-#      }
+#    centos_vm.vm.provision :puppet do |puppet|
+#     puppet.manifests_path = '/Users/brendan/Dropbox/Development/dmoore-puppet/manifests'
+#     puppet.manifest_file = 'site.pp'
+#     puppet.options = "--config /vagrant/puppet.conf --fileserverconfig=/vagrant/fileserver.conf --environment production"
+#     puppet.module_path = ['/Users/brendan/Dropbox/Development/dmoore-puppet/modules']
+#     puppet.hiera_config_path = 'hiera.yaml'
+#     puppet.facter = {
+#       "fqdn" => 'centos.pow.boomboom'
+#     }
 #    end
 #  end
-#end
+# end
