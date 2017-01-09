@@ -23,13 +23,9 @@ Vagrant.configure("2") do |config|
     end
 
     box_config.vm.provision :puppet do |puppet|
-      #puppet.manifests_path = '/Users/brendan/usp/puppet/manifests'
-      #puppet.manifest_file = 'site.pp'
       puppet.environment_path = '/Users/brendan/usp/puppet/environments'
       puppet.environment = 'production'
-      #puppet.options = "--config /vagrant/puppet.conf --fileserverconfig=/vagrant/fileserver.conf --environment production"
       puppet.options = '--verbose --debug'
-      #puppet.module_path = ['/Users/brendan/usp/puppet/modules']
       puppet.hiera_config_path = 'hiera.yaml'
       puppet.facter = {
         "fqdn" => 'ubuntu.pow.boomboom'
@@ -49,13 +45,9 @@ Vagrant.configure("2") do |config|
     end
 
     box_config.vm.provision :puppet do |puppet|
-      #puppet.manifests_path = '/Users/brendan/usp/puppet/manifests'
-      #puppet.manifest_file = 'site.pp'
       puppet.environment_path = '/Users/brendan/usp/puppet/environments'
       puppet.environment = 'production'
-      #puppet.options = "--config /vagrant/puppet.conf --fileserverconfig=/vagrant/fileserver.conf --environment production"
       puppet.options = '--verbose --debug'
-      #puppet.module_path = ['/Users/brendan/usp/puppet/modules']
       puppet.hiera_config_path = 'hiera.yaml'
       puppet.facter = {
         "fqdn" => 'centos.pow.boomboom'
