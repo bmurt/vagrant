@@ -6,5 +6,7 @@ apt-key add DEB-GPG-KEY-puppet
 
 apt-get update -y
 
-# upgrade commented out due to grub and sudoers requiring user interaction
-# apt-get upgrade -y
+# skip upgrading the following packages due to grub and sudoers requiring user interaction
+apt-mark hold grub-common grub-pc grub-pc-bin grub2-common sudo
+
+apt-get upgrade -y
