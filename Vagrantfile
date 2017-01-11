@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 
   # Ubuntu 14.04 Box
   config.vm.define :ubuntu do |box_config|
-    box_config.vm.box = 'puppetlabs/ubuntu-16.04-64-puppet'
+    box_config.vm.box = 'puppetlabs/ubuntu-14.04-64-puppet'
     box_config.vm.network :private_network, type: 'dhcp'
     box_config.vm.hostname = 'ubuntu'
     box_config.vm.provision :shell, :path => 'ubuntu-bootstrap.sh'
